@@ -276,10 +276,10 @@
       font-size: 0.78rem;
       color: var(--muted);
     }
-    /* ── TECH STACK ── */
+  /* ── TECH STACK ── */
     .tech-grid {
       display: flex;
-      gap: 3rem;
+      gap: 2rem;
       align-items: flex-start;
       flex-wrap: wrap;
     }
@@ -288,10 +288,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: 1.25rem;
       background: var(--card);
       border: 1px solid var(--border);
-      padding: 2.5rem 3rem;
+      padding: 3rem 4rem;
       transition: border-color 0.2s, transform 0.2s;
       cursor: default;
     }
@@ -301,9 +301,10 @@
       transform: translateY(-4px);
     }
  
-    .tech-card svg {
-      width: 72px;
-      height: 72px;
+    .tech-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
     }
  
     .tech-name {
