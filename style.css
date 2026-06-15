@@ -137,12 +137,21 @@
     }
  
     .highlight-item {
+      display: block;
       background: var(--card);
       padding: 2rem 1.75rem;
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 0.5rem;
     }
  
-    .highlight-item:hover { background: #242840; }
+    .highlight-item:hover,
+    .highlight-item:focus-visible {
+      background: #242840;
+      transform: translateY(-2px);
+      outline: none;
+    }
  
     .highlight-num {
       font-family: 'Syne', sans-serif;
@@ -302,48 +311,8 @@
       align-self: end;
     }
  
-  /* ── TECH STACK ── */
-    .tech-grid {
-      display: flex;
-      gap: 2rem;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
- 
-    .tech-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.25rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 3rem 4rem;
-      transition: border-color 0.2s, transform 0.2s;
-      cursor: default;
-    }
- 
-    .tech-card:hover {
-      border-color: var(--amber-dim);
-      transform: translateY(-4px);
-    }
- 
-    .tech-card img {
-      width: 120px;
-      height: 120px;
-      object-fit: contain;
-    }
- 
-    .tech-name {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
- 
     /* ── RESPONSIVE ── */
- @media (max-width: 700px) {
+    @media (max-width: 700px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
       .hero { padding: 10rem 1.5rem 5rem; }
